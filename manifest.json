@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "Backwhats",
+  "description": "Description",
+  "version": "1.0",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "/app/icons/icon16.png",
+    "48": "/app/icons/icon48.png",
+    "128": "/app/icons/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "/app/icons/icon16.png",
+    "default_popup": "/app/popup.html",
+    "default_title": "Backwhats!"
+  },
+  "options_page": "/app/options.html",
+  "default_locale": "en",
+  "permissions": [
+    "activeTab",
+    "idle",
+    "notifications",
+    "storage",
+    "tabs",
+    "https://web.whatsapp.com/*",
+    "http://web.whatsapp.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "/app/js/background.js"
+    ],
+    "persistent": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*",
+        "http://web.whatsapp.com/*"
+      ],
+      "css": [
+        "/app/css/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://web.whatsapp.com/*",
+        "http://web.whatsapp.com/*"
+      ],
+      "js": [
+        "/app/js/inject.js"
+      ]
+    }
+  ]
+}
