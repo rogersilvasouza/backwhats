@@ -10,12 +10,11 @@
     "128": "/app/icons/icon128.png"
   },
   "browser_action": {
-    "default_icon": "/app/icons/icon16.png",
+    "default_icon": "/app/icons/icon128.png",
     "default_popup": "/app/popup.html",
     "default_title": "Backwhats!"
   },
   "options_page": "/app/options.html",
-  "default_locale": "en",
   "permissions": [
     "activeTab",
     "idle",
@@ -24,31 +23,5 @@
     "tabs",
     "https://web.whatsapp.com/*",
     "http://web.whatsapp.com/*"
-  ],
-  "background": {
-    "scripts": [
-      "/app/js/background.js"
-    ],
-    "persistent": true
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "https://web.whatsapp.com/*",
-        "http://web.whatsapp.com/*"
-      ],
-      "css": [
-        "/app/css/inject.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://web.whatsapp.com/*",
-        "http://web.whatsapp.com/*"
-      ],
-      "js": [
-        "/app/js/inject.js"
-      ]
-    }
   ]
 }
