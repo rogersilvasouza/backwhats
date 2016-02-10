@@ -24,6 +24,8 @@ function saveLanguage() {
 
     localStorage.setItem("language", document.getElementById("url").value);
 
+    alert('Save');
+
 }
 
 saveButton.addEventListener('click', function () {
