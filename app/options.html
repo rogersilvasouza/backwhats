@@ -1,34 +1,37 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
-    <title>Stylizr</title>
-    <style>
-      body {
-        font-family: sans-serif;
-      }
-      label {
-        display: block;
-      }
-      textarea {
-        font-family: monospace;
-      }
-      .message {
-        height: 20px;
-        background: #eee;
-        padding: 5px;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/app/icons/16.png"/>
+    <title>PAPERWHATS</title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'/>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/cover.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="message"></div>
-    <h3>Backwhats</h3>
-    <ol>
-      <li>Para saber mais <img src="/app/icons/icon16.png" /></li>
-    </ol>
-    <textarea name="style_url" id="style_url" cols=80 rows=24 placeholder="eg: * { font-size: 110%; }"></textarea>
-    <br/>
-    <button class="submit">Save</button>
-    <button class="reset">Reset</button>
-    <script src="/app/js/inject.js"></script>
+  <body id="options">
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Options</h3>
+            </div>
+          </div>
+          <div class="inner cover">
+            <h1 class="cover-heading"></h1>
+            <p class="lead">Insira a url da imagem</p>
+            <p class="lead">
+              <input type="text" name="url" id="url" value="" />
+              <button id="save" class="btn btn-lg btn-primary">Save</button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/app/js/options.js"></script>
   </body>
 </html>
