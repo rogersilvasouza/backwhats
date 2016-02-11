@@ -10,7 +10,7 @@ var i, elems, url, img = 'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfp1
 
 img = 'https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/942801_1131749893532066_4194837725433874430_n.jpg?oh=20bcbdf081fb48ae1aa8c75a0df3607e&oe=577078EB';
 
-img = 'https://res.cloudinary.com/teepublic/image/private/s--nc0YsF2E--/t_Preview/b_rgb:c62b29,c_limit,f_jpg,h_630,q_90,w_630/v1446197407/production/designs/145085_0';
+//img = 'https://res.cloudinary.com/teepublic/image/private/s--nc0YsF2E--/t_Preview/b_rgb:c62b29,c_limit,f_jpg,h_630,q_90,w_630/v1446197407/production/designs/145085_0';
 
 // img = localStorage.getItem("language");
 //
