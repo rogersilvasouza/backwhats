@@ -22,12 +22,11 @@ if (image) {
 
 } else {
 
-    img = 'https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/942801_1131749893532066_4194837725433874430_n.jpg?oh=20bcbdf081fb48ae1aa8c75a0df3607e&oe=577078EB';
+    img = 'http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-334393.jpg';
 
 }
 
 elems = document.getElementsByClassName('pane-list-user');
-
 
 if (elems.length) {
 
@@ -43,7 +42,7 @@ function changeBackground() {
 
     "use strict";
 
-    elems = document.getElementsByClassName('pane-chat-body');
+    elems = document.getElementsByClassName("pane-chat-body");
 
     url = decodeURIComponent(img);
 
@@ -54,6 +53,8 @@ function changeBackground() {
         elems[i].style.backgroundRepeat = 'no-repeat';
 
     }
+
+    document.getElementById("app") .style.background = "url('" + url + "') no-repeat";
 
 }
 
