@@ -14,11 +14,7 @@ chrome.storage.local.get('image', function (result) {
 
     image = result.image;
 
-    console.log('Dentro da função -> ' + image);
-
 });
-
-console.log('Fora da função -> ' + image);
 
 if (image) {
 
@@ -32,31 +28,35 @@ if (image) {
 
 elems = document.getElementsByClassName('pane-list-user');
 
-for (i = 0; i < elems.length; i = i + 1) {
 
-  elems[i].style.background = 'red';
+if (elems.length) {
+
+    for (i = 0; i < elems.length; i = i + 1) {
+
+        elems[i].style.background = 'red';
+
+    }
 
 }
 
 function changeBackground() {
 
-  "use strict";
+    "use strict";
 
-  elems = document.getElementsByClassName('pane-chat-body');
+    elems = document.getElementsByClassName('pane-chat-body');
 
-  url = decodeURIComponent(img);
+    url = decodeURIComponent(img);
 
-  for (i = 0; i < elems.length; i = i + 1) {
+    for (i = 0; i < elems.length; i = i + 1) {
 
-    elems[i].style.background       = "url('" + url + "')";
-    elems[i].style.backgroundRepeat = 'no-repeat';
+        elems[i].style.background       = "url('" + url + "')";
 
-  }
+        elems[i].style.backgroundRepeat = 'no-repeat';
+
+    }
 
 }
 
 changeBackground();
 
 document.getElementById("app").addEventListener("click", changeBackground);
-
-console.log('CSS Alterado');
