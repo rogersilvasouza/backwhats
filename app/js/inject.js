@@ -1,24 +1,41 @@
 /*jslint white: true, browser: true */
-/*globals console */
+/*globals console, image, key, changes, chrome */
 
 /**
 * Inject.js
 *
 */
 
-var i, elems, url, img = 'https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/12670068_934420459968681_3746995988839703274_n.jpg?oh=39c25a41ba70479974155ddd46ee0f33&oe=5765AD9A&__gda__=1462229779_7f2f9354951fb7e4226ba8e11a328bbc';
+var i, elems, url, img, image;
 
-img = 'https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/942801_1131749893532066_4194837725433874430_n.jpg?oh=20bcbdf081fb48ae1aa8c75a0df3607e&oe=577078EB';
+chrome.storage.local.get('image', function (result) {
 
-// img = localStorage.getItem("language");
-//
-// console.log(img);
+    "use strict";
 
+    image = result.image;
+
+    console.log('Dentro da função -> ' + image);
+
+});
+
+console.log('Fora da função -> ' + image);
+
+if (image) {
+
+    img = image;
+
+} else {
+
+    img = 'https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/942801_1131749893532066_4194837725433874430_n.jpg?oh=20bcbdf081fb48ae1aa8c75a0df3607e&oe=577078EB';
+
+}
 
 elems = document.getElementsByClassName('pane-list-user');
 
 for (i = 0; i < elems.length; i = i + 1) {
-    elems[i].style.background = 'red';
+
+  elems[i].style.background = 'red';
+
 }
 
 function changeBackground() {

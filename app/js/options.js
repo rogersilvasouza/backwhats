@@ -1,28 +1,29 @@
 /*jslint browser: true*/
 /*global $, jQuery, console, alert, GET, chrome, language*/
 
-var saveButton = document.getElementById('save'),
-    language;
+var saveButton = document.getElementById('save'), image;
 
-function restoreLanguage() {
+function restoreImage() {
 
     "use strict";
 
-    language = localStorage.getItem("language");
+    image = localStorage.getItem("image");
 
-    if (language) {
+    if (image) {
 
-        document.getElementById("url").value = language;
+        document.getElementById("url").value = image;
 
     }
 
 }
 
-function saveLanguage() {
+function saveImage() {
 
     "use strict";
 
-    localStorage.setItem("language", document.getElementById("url").value);
+    localStorage.setItem("image", document.getElementById("url").value);
+
+    chrome.storage.local.set({'image': document.getElementById("url").value});
 
     alert('Save');
 
@@ -32,7 +33,7 @@ saveButton.addEventListener('click', function () {
 
     "use strict";
 
-    saveLanguage();
+    saveImage();
 
 });
 
@@ -40,6 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     "use strict";
 
-    restoreLanguage();
+    restoreImage();
 
 });
