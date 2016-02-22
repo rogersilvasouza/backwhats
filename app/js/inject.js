@@ -26,33 +26,15 @@ if (image) {
 
 }
 
-elems = document.getElementsByClassName('pane-list-user');
-
-if (elems.length) {
-
-    for (i = 0; i < elems.length; i = i + 1) {
-
-        elems[i].style.background = 'red';
-
-    }
-
-}
-
 function changeBackground() {
 
     "use strict";
 
-    elems = document.getElementsByClassName("pane-chat-body");
-
     url = decodeURIComponent(img);
 
-    for (i = 0; i < elems.length; i = i + 1) {
+    document.getElementsByClassName("pane-chat-body")[0].style.background       = "url('" + url + "')";
 
-        elems[i].style.background       = "url('" + url + "')";
-
-        elems[i].style.backgroundRepeat = 'no-repeat';
-
-    }
+    document.getElementsByClassName("pane-chat-body")[0].style.backgroundRepeat = 'no-repeat';
 
     document.getElementById("app") .style.background = "url('" + url + "') no-repeat";
 
