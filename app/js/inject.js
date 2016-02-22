@@ -36,6 +36,8 @@ function changeBackground() {
 
     document.getElementsByClassName("pane-chat-body")[0].style.backgroundRepeat = 'no-repeat';
 
+    document.getElementsByClassName("pane-chat-body")[0].style.backgroundSize = 'cover';
+
     document.getElementById("app") .style.background = "url('" + url + "') no-repeat";
 
 }
