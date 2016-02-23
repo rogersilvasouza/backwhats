@@ -32,13 +32,21 @@ function changeBackground() {
 
     url = decodeURIComponent(img);
 
-    document.getElementsByClassName("pane-chat-body")[0].style.background       = "url('" + url + "')";
+    if (document.getElementsByClassName("pane-chat-body").length > 0) {
 
-    document.getElementsByClassName("pane-chat-body")[0].style.backgroundRepeat = 'no-repeat';
+      document.getElementsByClassName("pane-chat-body")[0].style.background       = "url('" + url + "')";
 
-    document.getElementsByClassName("pane-chat-body")[0].style.backgroundSize = 'cover';
+      document.getElementsByClassName("pane-chat-body")[0].style.backgroundRepeat = 'no-repeat';
 
-    document.getElementById("app") .style.background = "url('" + url + "') no-repeat";
+      document.getElementsByClassName("pane-chat-body")[0].style.backgroundSize = 'cover';
+
+    }
+
+    if (document.getElementById("app").length > 0) {
+
+      document.getElementById("app").style.background = "url('" + url + "') no-repeat";
+
+    }
 
 }
 
