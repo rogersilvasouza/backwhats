@@ -42,13 +42,19 @@ function changeBackground() {
 
     }
 
-    if (document.getElementById("app").length > 0) {
-
-      document.getElementById("app").style.background = "url('" + url + "') no-repeat";
-
-    }
+    document.getElementById("app").style.background = "url('" + url + "') no-repeat";
 
 }
+
+// function myClickHandler() {
+//
+//     "use strict";
+//
+//     console.log("The document was clicked!");
+//
+// }
+//
+// document.onclick = myClickHandler;
 
 changeBackground();
 
