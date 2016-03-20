@@ -8,27 +8,19 @@
 
 var i, elems, url, img, image;
 
-chrome.storage.local.get('image', function (result) {
-
-    "use strict";
-
-    image = result.image;
-
-});
-
-if (image) {
-
-    img = image;
-
-} else {
-
-    img = 'chrome-extension://' + chrome.runtime.id + '/app/img/background.jpg';
-
-}
-
 function changeBackground() {
 
     "use strict";
+
+    if (image) {
+
+        img = image;
+
+    } else {
+
+        img = 'chrome-extension://' + chrome.runtime.id + '/app/img/background.jpg';
+
+    }
 
     url = decodeURIComponent(img);
 
@@ -46,6 +38,40 @@ function changeBackground() {
 
 }
 
-changeBackground();
+function loadImage() {
 
-document.getElementById("app").addEventListener("click", changeBackground);
+    "use strict";
+
+    chrome.storage.local.get('image', function (result) {
+
+        image = result.image;
+
+    });
+
+    changeBackground();
+
+}
+
+setTimeout(function() {
+
+  "use strict";
+
+  loadImage();
+
+}, 1000);
+
+document.getElementById("app").addEventListener("click", loadImage());
+
+document.getElementById("app").addEventListener("click", function () {
+
+  "use strict";
+
+  chrome.storage.local.get('image', function (result) {
+
+      image = result.image;
+
+  });
+
+  changeBackground();
+
+});
