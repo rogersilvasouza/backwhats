@@ -2,7 +2,7 @@
 /*globals console, image, key, changes, chrome */
 
 /**
-* Inject.js
+* inject.js
 *
 */
 
@@ -22,7 +22,7 @@ if (image) {
 
 } else {
 
-    img = 'http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-334393.jpg';
+    img = 'chrome-extension://' + chrome.runtime.id + '/app/img/background.jpg';
 
 }
 
@@ -34,27 +34,17 @@ function changeBackground() {
 
     if (document.getElementsByClassName("pane-chat-body").length > 0) {
 
-      document.getElementsByClassName("pane-chat-body")[0].style.background       = "url('" + url + "')";
+        document.getElementsByClassName("pane-chat-body")[0].style.background       = "url('" + url + "')";
 
-      document.getElementsByClassName("pane-chat-body")[0].style.backgroundRepeat = 'no-repeat';
+        document.getElementsByClassName("pane-chat-body")[0].style.backgroundRepeat = 'no-repeat';
 
-      document.getElementsByClassName("pane-chat-body")[0].style.backgroundSize = 'cover';
+        document.getElementsByClassName("pane-chat-body")[0].style.backgroundSize = 'cover';
 
     }
 
     document.getElementById("app").style.background = "url('" + url + "') no-repeat";
 
 }
-
-// function myClickHandler() {
-//
-//     "use strict";
-//
-//     console.log("The document was clicked!");
-//
-// }
-//
-// document.onclick = myClickHandler;
 
 changeBackground();
 

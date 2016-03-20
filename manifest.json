@@ -3,7 +3,7 @@
   "name": "PaperWhats",
   "description": "Description",
   "version": "0.0.1",
-  "homepage_url": "http://extensionizr.com",
+  "homepage_url": "http://paperwhats.com",
   "icons": {
     "16": "/app/icons/16.png",
     "48": "/app/icons/48.png",
@@ -15,13 +15,22 @@
     "default_title": "PaperWhats!"
   },
   "options_page": "/app/options.html",
+  "content_scripts": [
+    {
+      "matches": ["*://*.whatsapp.com/*"],
+      "js": ["/app/js/inject.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "/app/img/*.jpg"
+  ],
   "permissions": [
     "activeTab",
     "idle",
     "notifications",
     "storage",
     "tabs",
-    "https://web.whatsapp.com/*",
-    "http://web.whatsapp.com/*"
+    "https://*.whatsapp.com/*",
+    "http://*.whatsapp.com/*"
   ]
 }
