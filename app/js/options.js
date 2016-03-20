@@ -1,7 +1,7 @@
 /*jslint browser: true*/
 /*global $, jQuery, console, alert, GET, chrome, language*/
 
-var saveButton = document.getElementById('save'), image;
+var saveButton = document.getElementById('save'), helpButton = document.getElementById('help'), image;
 
 function restoreImage() {
 
@@ -34,6 +34,14 @@ saveButton.addEventListener('click', function () {
     "use strict";
 
     saveImage();
+
+});
+
+helpButton.addEventListener('click', function () {
+
+    "use strict";
+
+    window.open('http://www.paperwhats.com/help', '_blank');
 
 });
 

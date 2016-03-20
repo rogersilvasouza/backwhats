@@ -4,9 +4,11 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+    <meta name="description" content="Extension for chrome to change background for WhatsApp site"/>
+    <meta name="author" content="PaperWhats"/>
     <link rel="icon" href="/app/icons/16.png"/>
+    <link rel="stylesheet" href="/app/css/bootstrap.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="anonymous"/>
     <title>PAPERWHATS</title>
   </head>
   <body id="options">
@@ -15,16 +17,22 @@
         <div class="cover-container">
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Options</h3>
+              <h1 class="cover-heading">Options</h1>
             </div>
           </div>
           <div class="inner cover">
-            <h1 class="cover-heading"></h1>
-            <p class="lead">Insira a url da imagem</p>
-            <p class="lead">
-              <input type="text" name="url" id="url" value=""/>
-              <button id="save" class="btn btn-lg btn-primary">Save</button>
-            </p>
+            <h3 class="masthead-brand">Altere a imagem</h3>
+            <div class="col-lg-6">
+              <div class="input-group">
+                <input type="text" class="form-control" aria-label="Text input with multiple buttons" name="url" id="url" placeholder="Insira a url da imagem"/>
+                <div class="input-group-btn">
+                  <button type="button" class="btn btn-default" aria-label="Help" id="help">
+                    <span class="fa fa-info-circle"></span>
+                  </button>
+                  <button type="button" class="btn btn-default" id="save">Salvar</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
